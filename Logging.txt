@@ -1,6 +1,6 @@
-May 14, 2020 7:59:53 PM com.sysco.api.sample.api.tests.GetEmployeeDetailsTest testGetEmployeeDetails
+May 14, 2020 8:05:00 PM com.sysco.api.sample.api.tests.GetEmployeeDetailsTest testGetEmployeeDetails
 INFO: ---employee_Name----Tiger Nixon
-May 14, 2020 7:59:53 PM com.sysco.api.sample.api.tests.GetEmployeeDetailsTest testGetEmployeeDetails
+May 14, 2020 8:05:00 PM com.sysco.api.sample.api.tests.GetEmployeeDetailsTest testGetEmployeeDetails
 INFO: ---employee_salary----320800
-May 14, 2020 7:59:53 PM com.sysco.api.sample.api.tests.GetEmployeeDetailsTest testGetEmployeeDetails
+May 14, 2020 8:05:00 PM com.sysco.api.sample.api.tests.GetEmployeeDetailsTest testGetEmployeeDetails
 INFO: ---employee_age----61
