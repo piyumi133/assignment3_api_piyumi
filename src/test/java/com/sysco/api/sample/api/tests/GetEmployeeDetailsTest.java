@@ -33,13 +33,14 @@ public class GetEmployeeDetailsTest extends TestBase {
 
         Response employeeList = Employee.getEmployeeListDetials();
         EmployeeModel employeeModel = (EmployeeModel) ResponseUtil.getDataObjectValueInDataArray(employeeList.asString(), 0, EmployeeModel.class);
-        softAssert.assertEquals(ResponseUtil.getStatus(employeeList), StatusTestData.STATUS_SUCCESS, "Sucess code is not apppear as expected");
+        softAssert.assertEquals(ResponseUtil.getStatus(employeeList), StatusTestData.STATUS_SUCCESS, "Success code is not apppear as expected");
         softAssert.assertEquals(employeeModel.employee_name, EmployeeTestData.EMP_NAME, "Employee details are not match as expected[name]");
         softAssert.assertEquals(employeeModel.employee_salary, EmployeeTestData.EMP_SALARY, "Employee details are not match as expected[salary]");
         softAssert.assertEquals(employeeModel.employee_age, EmployeeTestData.EMP_AGE, "Employee details are not match as expected[name]");
         LOGGER.info("---employee_Name----" + employeeModel.employee_name);
         LOGGER.info("---employee_salary----" + employeeModel.employee_salary);
         LOGGER.info("---employee_age----" + employeeModel.employee_age);
+
         softAssert.assertAll();
 
     }
