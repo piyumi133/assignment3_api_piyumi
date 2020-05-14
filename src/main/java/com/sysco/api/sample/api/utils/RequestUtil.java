@@ -1,7 +1,7 @@
 package com.sysco.api.sample.api.utils;
 
 import com.jayway.restassured.response.Response;
-import com.sysco.api.sample.api.common.Constant;
+import com.sysco.api.sample.api.common.Constants;
 import com.syscolab.qe.core.api.restassured.RestUtil;
 
 import java.util.Map;
@@ -14,8 +14,8 @@ public class RequestUtil {
     }
 
     public static void setRequestBaseUrls() {
-        RestUtil.BASE_PATH = Constant.BASE_PATH;
-        RestUtil.API_HOST = Constant.API_HOST;
+        RestUtil.BASE_PATH = Constants.BASE_PATH;
+        RestUtil.API_HOST = Constants.API_HOST;
 
     }
 

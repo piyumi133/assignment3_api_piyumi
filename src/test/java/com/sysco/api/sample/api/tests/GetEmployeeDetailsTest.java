@@ -6,24 +6,30 @@ import com.sysco.api.sample.api.requests.functions.Employee;
 import com.sysco.api.sample.api.response.model.EmployeeModel;
 import com.sysco.api.sample.api.utils.ResponseUtil;
 import com.sysco.api.sample.api.types.*;
+import com.sysco.api.sample.api.utils.TestBase;
+import org.json.JSONException;
 import org.testng.annotations.*;
 import org.testng.asserts.SoftAssert;
 import java.io.IOException;
 import java.util.logging.Logger;
 
 
-public class GetEmployeeDetailsTest {
+public class GetEmployeeDetailsTest extends TestBase {
     private final static Logger LOGGER = Logger.getLogger("global");
+    SoftAssert softAssert = new SoftAssert();
 
-    @Test
-    public void testGetEmployeeDetails() {
-
-        SoftAssert softAssert = new SoftAssert();
+    @BeforeMethod
+    public void initClass()
+    {
         try {
             LoggerA.setup();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void testGetEmployeeDetails() throws JSONException {
 
         Response employeeList = Employee.getEmployeeListDetials();
         EmployeeModel employeeModel = (EmployeeModel) ResponseUtil.getDataObjectValueInDataArray(employeeList.asString(), 0, EmployeeModel.class);
